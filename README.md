@@ -28,6 +28,12 @@ Root directory: /
 
 Depois de conectar o repositório, cada push na branch principal publica uma nova versão.
 
+Se a Cloudflare pedir um comando de deploy separado, use:
+
+```txt
+npm run deploy
+```
+
 ## Personalização
 
 Edite `src/data/portfolio.js` para atualizar nome, e-mail, links, projetos, stack e textos principais.
