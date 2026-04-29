@@ -5,7 +5,9 @@ export default function Header({ activeSection, menuOpen, onCloseMenu, onToggleM
   return (
     <header className="siteHeader">
       <a className="brand" href="#top" aria-label={`${profile.name} - início`} onClick={onCloseMenu}>
-        <span className="brandMark">JV</span>
+        <span className="brandMark">
+          <img src={profile.avatar} alt="" />
+        </span>
         <span>
           <strong>{profile.name}</strong>
           <small>{profile.role}</small>
