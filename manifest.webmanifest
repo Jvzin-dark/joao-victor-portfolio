@@ -1,0 +1,20 @@
+{
+  "name": "João Victor | Desenvolvedor Web",
+  "short_name": "João Victor",
+  "description": "Portfólio web minimalista de João Victor.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f4f7f2",
+  "theme_color": "#476a62",
+  "icons": [
+    {
+      "src": "/assets/portfolio-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["portfolio", "productivity", "business"]
+}
