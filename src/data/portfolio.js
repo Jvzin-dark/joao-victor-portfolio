@@ -3,8 +3,8 @@ export const profile = {
   role: "Desenvolvedor Web",
   location: "Brasil",
   email: "contato@joaovictor.dev",
-  github: "https://github.com/jvict",
-  linkedin: "https://www.linkedin.com/in/joaovictor/",
+  github: "https://github.com/Jvzin-dark",
+  linkedin: "https://www.linkedin.com/in/joão-victor-813583266",
 };
 
 export const navigation = [
