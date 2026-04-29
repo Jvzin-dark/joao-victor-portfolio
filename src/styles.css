@@ -436,6 +436,20 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
+.projectVisual.withMedia {
+  display: grid;
+  place-items: center;
+}
+
+.projectVisual.withMedia::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
 .projectVisual span {
   position: absolute;
   left: 22px;
@@ -443,6 +457,7 @@ a {
   color: rgba(22, 24, 29, 0.38);
   font-size: 13px;
   font-weight: 900;
+  z-index: 2;
 }
 
 .projectVisual i,
@@ -471,6 +486,38 @@ a {
   box-shadow:
     0 22px 0 rgba(22, 24, 29, 0.14),
     92px 22px 0 rgba(22, 24, 29, 0.1);
+}
+
+.projectMediaShell {
+  position: relative;
+  z-index: 1;
+  height: calc(100% - 36px);
+  aspect-ratio: 240 / 520;
+  border: 5px solid rgba(17, 20, 24, 0.92);
+  border-radius: 24px;
+  background: #111418;
+  box-shadow: 0 22px 48px rgba(17, 20, 24, 0.24);
+}
+
+.projectMediaShell::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  z-index: 2;
+  width: 28px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateX(-50%);
+}
+
+.projectMediaShell img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 18px;
 }
 
 .projectCard.sage .projectVisual {

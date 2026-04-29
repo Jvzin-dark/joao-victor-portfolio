@@ -9,10 +9,18 @@ export default function ProjectsSection() {
       <div className="projectGrid">
         {projects.map((project, index) => (
           <article className={`projectCard ${project.accent}`} key={project.title}>
-            <div className="projectVisual" aria-hidden="true">
+            <div className={`projectVisual ${project.media ? "withMedia" : ""}`} aria-hidden="true">
               <span>{String(index + 1).padStart(2, "0")}</span>
-              <i />
-              <b />
+              {project.media ? (
+                <div className="projectMediaShell">
+                  <img src={project.media} alt="" loading="lazy" />
+                </div>
+              ) : (
+                <>
+                  <i />
+                  <b />
+                </>
+              )}
             </div>
             <div className="projectContent">
               <span>{project.eyebrow}</span>
