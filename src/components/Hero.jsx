@@ -12,7 +12,7 @@ export default function Hero() {
         </p>
         <h1 id="hero-title">{profile.name}</h1>
         <p className="heroText">
-          Construo interfaces web limpas, rápidas e agradáveis para negócios que precisam parecer simples porque foram bem resolvidos.
+          Construo interfaces web limpas, rápidas e agradáveis para negócios.
         </p>
         <div className="heroActions">
           <a className="button primary" href="#projetos">
