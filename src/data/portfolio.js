@@ -4,7 +4,7 @@ export const profile = {
   location: "Brasil",
   email: "contato@joaovictor.dev",
   whatsapp: "5581988910369",
-  avatar: "/assets/profile-photo.jpg",
+  initials: "JV",
   github: "https://github.com/Jvzin-dark",
   linkedin: "https://www.linkedin.com/in/joão-victor-813583266",
 };
