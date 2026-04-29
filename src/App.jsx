@@ -8,13 +8,11 @@ import ProcessSection from "./components/ProcessSection.jsx";
 import StackSection from "./components/StackSection.jsx";
 import ContactSection from "./components/ContactSection.jsx";
 import Footer from "./components/Footer.jsx";
-import Toast from "./components/Toast.jsx";
-import { navigation, profile } from "./data/portfolio.js";
+import { navigation } from "./data/portfolio.js";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("sobre");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [toast, setToast] = useState("");
   const year = useMemo(() => new Date().getFullYear(), []);
 
   useEffect(() => {
@@ -45,16 +43,6 @@ export default function App() {
     setMenuOpen(false);
   }
 
-  async function copyEmail() {
-    try {
-      await navigator.clipboard.writeText(profile.email);
-      setToast("E-mail copiado.");
-      window.setTimeout(() => setToast(""), 2200);
-    } catch {
-      window.location.href = `mailto:${profile.email}`;
-    }
-  }
-
   return (
     <>
       <Header activeSection={activeSection} menuOpen={menuOpen} onCloseMenu={closeMenu} onToggleMenu={() => setMenuOpen(current => !current)} />
@@ -65,10 +53,9 @@ export default function App() {
         <ProjectsSection />
         <ProcessSection />
         <StackSection />
-        <ContactSection onCopyEmail={copyEmail} />
+        <ContactSection />
       </main>
       <Footer year={year} />
-      {toast && <Toast message={toast} />}
     </>
   );
 }

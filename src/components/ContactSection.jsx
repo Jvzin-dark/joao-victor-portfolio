@@ -1,4 +1,4 @@
-import { Code2, Copy, Layers3, Mail, Palette, Zap } from "lucide-react";
+import { Code2, Layers3, MessageCircle, Palette, Zap } from "lucide-react";
 import { profile } from "../data/portfolio.js";
 
 const contactHighlights = [
@@ -8,7 +8,10 @@ const contactHighlights = [
   { icon: Layers3, text: "Arquitetura preparada para manutenção" },
 ];
 
-export default function ContactSection({ onCopyEmail }) {
+export default function ContactSection() {
+  const whatsappMessage = encodeURIComponent("Olá, João Victor! Vi seu portfólio e quero conversar sobre um projeto.");
+  const whatsappUrl = `https://wa.me/${profile.whatsapp}?text=${whatsappMessage}`;
+
   return (
     <section className="contactSection" id="contato">
       <div className="contactContent">
@@ -18,14 +21,10 @@ export default function ContactSection({ onCopyEmail }) {
           Me chama para construir uma presença digital elegante, funcional e fácil de manter.
         </p>
         <div className="contactActions">
-          <a className="button primary" href={`mailto:${profile.email}`}>
-            Enviar e-mail
-            <Mail size={17} />
+          <a className="button primary" href={whatsappUrl} target="_blank" rel="noreferrer">
+            Falar no WhatsApp
+            <MessageCircle size={17} />
           </a>
-          <button className="button secondary" type="button" onClick={onCopyEmail}>
-            Copiar e-mail
-            <Copy size={17} />
-          </button>
         </div>
       </div>
       <div className="contactPanel" aria-label="Resumo de disponibilidade">
