@@ -46,7 +46,8 @@ export const projects = [
     title: "Painel operacional",
     description: "Dashboard para acompanhar vendas, estoque e indicadores de negócio sem poluir a tomada de decisão.",
     tags: ["React", "UI System", "Dados"],
-    media: "/assets/project-product-digital-middle.gif",
+    video: "/assets/project-product-digital-middle.mp4",
+    poster: "/assets/project-product-digital-poster.jpg",
     accent: "sage",
   },
   {
@@ -54,7 +55,8 @@ export const projects = [
     title: "Experiência de catálogo",
     description: "Interface de compra direta com foco em velocidade, leitura fácil e jornada simples para fechar pedido.",
     tags: ["Vite", "UX", "Responsivo"],
-    media: "/assets/project-commerce-local-middle.gif",
+    video: "/assets/project-commerce-local-middle.mp4",
+    poster: "/assets/project-commerce-local-poster.jpg",
     accent: "clay",
   },
   {

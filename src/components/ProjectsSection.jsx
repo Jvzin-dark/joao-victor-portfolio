@@ -1,4 +1,5 @@
 import { projects } from "../data/portfolio.js";
+import ProjectPreviewVideo from "./ProjectPreviewVideo.jsx";
 import SectionHeader from "./SectionHeader.jsx";
 
 export default function ProjectsSection() {
@@ -9,11 +10,14 @@ export default function ProjectsSection() {
       <div className="projectGrid">
         {projects.map((project, index) => (
           <article className={`projectCard ${project.accent}`} key={project.title}>
-            <div className={`projectVisual ${project.media ? "withMedia" : ""}`} aria-hidden="true">
+            <div className={`projectVisual ${project.video ? "withMedia" : ""}`} aria-hidden="true">
               <span>{String(index + 1).padStart(2, "0")}</span>
-              {project.media ? (
+              {project.video ? (
                 <div className="projectMediaShell">
-                  <img src={project.media} alt="" loading="lazy" />
+                  <ProjectPreviewVideo
+                    src={project.video}
+                    poster={project.poster}
+                  />
                 </div>
               ) : (
                 <>

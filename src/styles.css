@@ -512,11 +512,12 @@ a {
   transform: translateX(-50%);
 }
 
-.projectMediaShell img {
+.projectMediaShell video {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+  pointer-events: none;
   border-radius: 18px;
 }
 
